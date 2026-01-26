@@ -197,7 +197,7 @@ function renderProducts(products) {
 
 function createProductCard(product) {
   const card = document.createElement('div');
-  card.className = 'product-card reveal';
+  card.className = 'product-card card-premium reveal hover-glow';
   card.setAttribute('data-category', product.category);
   
   card.innerHTML = `
@@ -209,9 +209,13 @@ function createProductCard(product) {
       <div class="product-category">${product.category}</div>
       <h3 class="product-title">${product.name}</h3>
       <p class="product-description">${product.shortDesc}</p>
-      <div class="product-footer">
-        <span class="product-price">${product.price}</span>
-        <button class="btn btn-accent btn-sm" onclick="openProductModal(${product.id})">
+      <div class="product-footer" style="flex-direction: column; gap: 0.75rem; align-items: stretch;">
+        <span class="product-price" style="text-align: center;">${product.price}</span>
+        <button class="btn whatsapp-btn btn-sm hover-glow" onclick="orderViaWhatsApp('${product.name}')" style="width: 100%; justify-content: center;">
+          <span class="whatsapp-btn-icon">💬</span>
+          Order via WhatsApp
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="openProductModal(${product.id})" style="width: 100%;">
           View Details
         </button>
       </div>
