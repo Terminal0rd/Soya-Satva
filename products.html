@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our complete range of premium soy products - tofu, soy milk, protein chunks, flour, and healthy snacks. All products are non-GMO and packed with nutrition.">
+  <meta name="keywords" content="buy tofu, soy milk online, soy protein, soy chunks, soy flour, healthy snacks">
+  <title>Our Products - SoyaSatva | Premium Soy-Based Foods</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">SS</div>
+        <span>SoyaSatva</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="benefits.html" class="nav-link">Benefits</a></li>
+        <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section style="background: var(--gradient-primary); color: white; padding: 8rem 0 4rem; text-align: center;">
+    <div class="container">
+      <h1 class="animate-fadeInUp" style="color: white; margin-bottom: 1rem;">Our Premium Products</h1>
+      <p class="animate-fadeInUp stagger-2" style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.95;">
+        Explore our complete range of high-quality soy-based products. Each item is crafted with care 
+        to deliver exceptional taste and nutrition.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filters and Search -->
+  <section class="bg-light" style="padding: 2rem 0;">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; justify-content: space-between;">
+        <!-- Category Filters -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+          <button class="filter-btn active" data-category="all" style="padding: 0.6rem 1.5rem; border: 2px solid var(--primary); background: var(--primary); color: white; border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; transition: var(--transition);">
+            All Products
+          </button>
+          <button class="filter-btn" data-category="tofu" style="padding: 0.6rem 1.5rem; border: 2px solid var(--primary); background: white; color: var(--primary); border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; transition: var(--transition);">
+            Tofu
+          </button>
+          <button class="filter-btn" data-category="milk" style="padding: 0.6rem 1.5rem; border: 2px solid var(--primary); background: white; color: var(--primary); border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; transition: var(--transition);">
+            Milk
+          </button>
+          <button class="filter-btn" data-category="protein" style="padding: 0.6rem 1.5rem; border: 2px solid var(--primary); background: white; color: var(--primary); border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; transition: var(--transition);">
+            Protein
+          </button>
+          <button class="filter-btn" data-category="flour" style="padding: 0.6rem 1.5rem; border: 2px solid var(--primary); background: white; color: var(--primary); border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; transition: var(--transition);">
+            Flour
+          </button>
+          <button class="filter-btn" data-category="snacks" style="padding: 0.6rem 1.5rem; border: 2px solid var(--primary); background: white; color: var(--primary); border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; transition: var(--transition);">
+            Snacks
+          </button>
+        </div>
+        
+        <!-- Search and Sort -->
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <input 
+            type="text" 
+            id="productSearch" 
+            placeholder="Search products..." 
+            style="padding: 0.7rem 1rem; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1rem; min-width: 200px;"
+          />
+          <select id="productSort" style="padding: 0.7rem 1rem; border: 2px solid var(--border); border-radius: var(--radius-sm); font-size: 1rem; cursor: pointer;">
+            <option value="popularity">Sort by Popularity</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="bg-white">
+    <div class="container">
+      <div id="productGrid" class="grid grid-3">
+        <!-- Products will be dynamically loaded via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalProductName">Product Name</h2>
+        <button class="modal-close" onclick="closeProductModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <div style="font-size: 6rem; margin-bottom: 1rem;" id="modalProductEmoji">🧈</div>
+          <span style="display: inline-block; padding: 0.4rem 1rem; background: var(--primary-light); color: white; border-radius: 20px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase;" id="modalProductCategory">Category</span>
+        </div>
+        
+        <div style="margin-bottom: 2rem;">
+          <h3 style="color: var(--primary); font-size: 2rem; text-align: center; margin-bottom: 0.5rem;" id="modalProductPrice">₹99</h3>
+        </div>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Description</h4>
+          <p id="modalProductDesc" style="color: var(--text-light); line-height: 1.7;"></p>
+        </div>
+        
+        <div style="margin-bottom: 1.5rem;">
+          <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Nutritional Highlights</h4>
+          <p id="modalProductNutrition" style="color: var(--text-light); line-height: 1.7;"></p>
+        </div>
+        
+        <div style="margin-bottom: 2rem;">
+          <h4 style="color: var(--dark); margin-bottom: 0.5rem;">Usage Ideas</h4>
+          <p id="modalProductUsage" style="color: var(--text-light); line-height: 1.7;"></p>
+        </div>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center;">
+          <button onclick="addToInquiry()" class="btn btn-accent">Add to Inquiry</button>
+          <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Info Section -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">What Else We Offer</h2>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">📦</div>
+          <h3 class="card-title" style="text-align: center;">Bulk Supply</h3>
+          <p class="card-text" style="text-align: center;">
+            Need products in large quantities? We offer competitive pricing for bulk orders. 
+            Perfect for restaurants, cafes, and catering businesses.
+          </p>
+        </div>
+        
+        <div class="card reveal stagger-2">
+          <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">🤝</div>
+          <h3 class="card-title" style="text-align: center;">B2B Wholesale</h3>
+          <p class="card-text" style="text-align: center;">
+            Partner with us for wholesale distribution. Exclusive rates and dedicated support 
+            for business partners. Contact us for partnership opportunities.
+          </p>
+        </div>
+        
+        <div class="card reveal stagger-3">
+          <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">🔄</div>
+          <h3 class="card-title" style="text-align: center;">Subscriptions</h3>
+          <p class="card-text" style="text-align: center;">
+            Never run out of your favorites! Subscribe for regular deliveries and enjoy 
+            special discounts. Flexible plans to suit your needs.
+          </p>
+        </div>
+        
+        <div class="card reveal">
+          <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">🚚</div>
+          <h3 class="card-title" style="text-align: center;">Home Delivery</h3>
+          <p class="card-text" style="text-align: center;">
+            Fresh products delivered right to your doorstep. Fast, reliable delivery across 
+            major cities. Cold chain maintained for freshness.
+          </p>
+        </div>
+        
+        <div class="card reveal stagger-2">
+          <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">⭐</div>
+          <h3 class="card-title" style="text-align: center;">Custom Tofu</h3>
+          <p class="card-text" style="text-align: center;">
+            Need specific firmness or flavor? We can customize tofu preparations to meet 
+            your exact requirements. Perfect for chefs and food businesses.
+          </p>
+        </div>
+        
+        <div class="card reveal stagger-3">
+          <div style="font-size: 3rem; margin-bottom: 1rem; text-align: center;">❄️</div>
+          <h3 class="card-title" style="text-align: center;">Storage Tips</h3>
+          <p class="card-text" style="text-align: center;">
+            <strong>Tofu:</strong> Keep refrigerated in water, change water daily. Use within 5 days.<br>
+            <strong>Soy Chunks:</strong> Store in airtight container in cool, dry place for months.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--gradient-primary); color: white; text-align: center; padding: 5rem 0;">
+    <div class="container reveal">
+      <h2 style="color: white; margin-bottom: 1rem;">Have Questions About Our Products?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">
+        Our team is here to help you choose the perfect products for your needs.
+      </p>
+      <a href="contact.html" class="btn btn-primary">Contact Us Today</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SoyaSatva</h3>
+          <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.8;">
+            Your trusted source for premium soy-based products. We're committed to providing 
+            the highest quality plant-based nutrition for a healthier, sustainable future.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="YouTube">📺</a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="benefits.html">Benefits</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="products.html">Premium Tofu</a></li>
+            <li><a href="products.html">Soy Milk</a></li>
+            <li><a href="products.html">Soy Chunks</a></li>
+            <li><a href="products.html">Soy Flour</a></li>
+            <li><a href="products.html">Soy Snacks</a></li>
+            <li><a href="products.html">Protein Powder</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>📧 info@soyasatva.com</li>
+            <li>📞 +91 XXXXXXXXXX</li>
+            <li>📍 Mumbai, Maharashtra</li>
+            <li>🕒 Mon - Sat: 9AM - 7PM</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 SoyaSatva. All rights reserved. | Premium Soy Products for Healthy Living</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919XXXXXXXXX" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+    💬
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  
+  <style>
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary) !important;
+      color: white !important;
+    }
+    
+    .no-products {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+  </style>
+</body>
+</html>

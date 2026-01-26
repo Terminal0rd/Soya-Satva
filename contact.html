@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact SoyaSatva for inquiries, orders, and support. Reach us via phone, email, WhatsApp, or visit our location in Mumbai.">
+  <meta name="keywords" content="contact soyasatva, customer support, order inquiry, location">
+  <title>Contact Us - SoyaSatva | Get in Touch</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">SS</div>
+        <span>SoyaSatva</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="benefits.html" class="nav-link">Benefits</a></li>
+        <li><a href="recipes.html" class="nav-link">Recipes</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      
+      <div class="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <section style="background: var(--gradient-primary); color: white; padding: 8rem 0 4rem; text-align: center;">
+    <div class="container">
+      <h1 class="animate-fadeInUp" style="color: white; margin-bottom: 1rem;">Get in Touch</h1>
+      <p class="animate-fadeInUp stagger-2" style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.95;">
+        Have questions? Need support? Want to place a bulk order? We're here to help! 
+        Reach out to us and we'll get back to you as soon as possible.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="bg-light" style="padding: 3rem 0;">
+    <div class="container">
+      <div class="grid grid-4">
+        <div class="card reveal hover-lift" style="text-align: center; cursor: pointer;" onclick="copyToClipboard('+91 XXXXXXXXXX', 'Phone number')">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Call Us</h4>
+          <p style="margin: 0; color: var(--text-dark);">+91 XXXXXXXXXX</p>
+          <p style="margin: 0.3rem 0 0; font-size: 0.85rem; color: var(--text-light);">Mon-Sat, 9AM-7PM</p>
+        </div>
+        
+        <div class="card reveal hover-lift stagger-2" style="text-align: center; cursor: pointer;" onclick="copyToClipboard('info@soyasatva.com', 'Email')">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Email Us</h4>
+          <p style="margin: 0; color: var(--text-dark);">info@soyasatva.com</p>
+          <p style="margin: 0.3rem 0 0; font-size: 0.85rem; color: var(--text-light);">We reply within 24 hours</p>
+        </div>
+        
+        <div class="card reveal hover-lift stagger-3" style="text-align: center; cursor: pointer;" onclick="openWhatsApp()">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💬</div>
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">WhatsApp</h4>
+          <p style="margin: 0; color: var(--text-dark);">+91 9XXXXXXXXX</p>
+          <p style="margin: 0.3rem 0 0; font-size: 0.85rem; color: var(--text-light);">Quick response guaranteed</p>
+        </div>
+        
+        <div class="card reveal hover-lift stagger-4" style="text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📍</div>
+          <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Visit Us</h4>
+          <p style="margin: 0; color: var(--text-dark);">Mumbai, Maharashtra</p>
+          <p style="margin: 0.3rem 0 0; font-size: 0.85rem; color: var(--text-light);">India - 400001</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Map -->
+  <section class="bg-white">
+    <div class="container">
+      <div class="grid grid-2" style="gap: 3rem;">
+        
+        <!-- Contact Form -->
+        <div class="reveal-left">
+          <div class="card" style="padding: 2.5rem;">
+            <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Send Us a Message</h2>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  class="form-control" 
+                  placeholder="Enter your full name"
+                  required
+                />
+                <div class="form-error">Please enter your name</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  class="form-control" 
+                  placeholder="your.email@example.com"
+                  required
+                />
+                <div class="form-error">Please enter a valid email</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number *</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  class="form-control" 
+                  placeholder="+91 XXXXXXXXXX"
+                  required
+                />
+                <div class="form-error">Please enter a valid phone number</div>
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Your Message *</label>
+                <textarea 
+                  id="message" 
+                  class="form-control" 
+                  placeholder="Tell us how we can help you..."
+                  rows="5"
+                  required
+                ></textarea>
+                <div class="form-error">Please enter your message</div>
+              </div>
+              
+              <button type="submit" class="btn btn-accent" style="width: 100%;">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Map & Additional Info -->
+        <div class="reveal-right">
+          <!-- Map Placeholder -->
+          <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: var(--radius-lg); height: 300px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 2rem; margin-bottom: 2rem;">
+            <div>
+              <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
+              <h3 style="margin-bottom: 0.5rem; color: white;">Our Location</h3>
+              <p style="margin: 0; opacity: 0.9;">Mumbai, Maharashtra, India</p>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; opacity: 0.8;">(Google Maps integration available)</p>
+            </div>
+          </div>
+          
+          <!-- Business Hours -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Business Hours</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; justify-content: space-between; padding: 0.8rem; background: var(--light); border-radius: var(--radius-sm);">
+                <span style="font-weight: 600;">Monday - Friday</span>
+                <span style="color: var(--primary);">9:00 AM - 7:00 PM</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 0.8rem; background: var(--light); border-radius: var(--radius-sm);">
+                <span style="font-weight: 600;">Saturday</span>
+                <span style="color: var(--primary);">9:00 AM - 6:00 PM</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 0.8rem; background: var(--light); border-radius: var(--radius-sm);">
+                <span style="font-weight: 600;">Sunday</span>
+                <span style="color: var(--accent);">Closed</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quick Links -->
+          <div class="card">
+            <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Quick Actions</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <a href="products.html" class="btn btn-secondary" style="text-align: center;">
+                Browse Products
+              </a>
+              <a href="tel:+91XXXXXXXXXX" class="btn btn-secondary" style="text-align: center;">
+                Call Now
+              </a>
+              <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="btn btn-secondary" style="text-align: center;">
+                WhatsApp Chat
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-description">Quick answers to common questions</p>
+      </div>
+      
+      <div style="max-width: 900px; margin: 0 auto;">
+        <div class="faq-item card reveal">
+          <div class="faq-question" style="padding: 1.5rem; cursor: pointer; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border);">
+            <span>How do I place an order?</span>
+            <span style="font-size: 1.5rem;">+</span>
+          </div>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <div style="padding: 1.5rem 0;">
+              <p style="line-height: 1.8; margin: 0;">
+                You can browse our products page, select what you need, and contact us via phone, 
+                email, or WhatsApp to place your order. We also accept orders for bulk purchases 
+                and subscriptions.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item card reveal">
+          <div class="faq-question" style="padding: 1.5rem; cursor: pointer; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border);">
+            <span>Do you deliver to my area?</span>
+            <span style="font-size: 1.5rem;">+</span>
+          </div>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <div style="padding: 1.5rem 0;">
+              <p style="line-height: 1.8; margin: 0;">
+                We currently deliver to major cities across India. Contact us with your location 
+                and we'll confirm if we can deliver to your area. We're constantly expanding our 
+                delivery network!
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item card reveal">
+          <div class="faq-question" style="padding: 1.5rem; cursor: pointer; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border);">
+            <span>What are your bulk order discounts?</span>
+            <span style="font-size: 1.5rem;">+</span>
+          </div>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <div style="padding: 1.5rem 0;">
+              <p style="line-height: 1.8; margin: 0;">
+                We offer attractive discounts on bulk orders for restaurants, cafes, gyms, and 
+                other businesses. Contact our sales team for customized pricing based on your 
+                requirements. Minimum order quantities apply.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item card reveal">
+          <div class="faq-question" style="padding: 1.5rem; cursor: pointer; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border);">
+            <span>How fresh are your products?</span>
+            <span style="font-size: 1.5rem;">+</span>
+          </div>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <div style="padding: 1.5rem 0;">
+              <p style="line-height: 1.8; margin: 0;">
+                Our tofu and soy milk are made fresh daily and delivered within 24-48 hours. 
+                We maintain strict cold chain logistics to ensure products reach you in perfect 
+                condition. Check the manufacturing date on packaging.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item card reveal">
+          <div class="faq-question" style="padding: 1.5rem; cursor: pointer; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border);">
+            <span>What is your return/refund policy?</span>
+            <span style="font-size: 1.5rem;">+</span>
+          </div>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <div style="padding: 1.5rem 0;">
+              <p style="line-height: 1.8; margin: 0;">
+                We stand behind our quality. If you're not satisfied with any product, contact us 
+                within 48 hours of delivery. We'll arrange a replacement or full refund, no questions 
+                asked. Your satisfaction is our guarantee.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="faq-item card reveal">
+          <div class="faq-question" style="padding: 1.5rem; cursor: pointer; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center;">
+            <span>Can I visit your production facility?</span>
+            <span style="font-size: 1.5rem;">+</span>
+          </div>
+          <div class="faq-answer" style="padding: 0 1.5rem; max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+            <div style="padding: 1.5rem 0;">
+              <p style="line-height: 1.8; margin: 0;">
+                Yes! We welcome facility visits by appointment. See how we make our products and 
+                learn about our quality processes. Contact us to schedule a tour. Great for 
+                schools, nutrition students, and potential partners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--gradient-primary); color: white; text-align: center; padding: 5rem 0;">
+    <div class="container reveal">
+      <h2 style="color: white; margin-bottom: 1rem;">Still Have Questions?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.95;">
+        Don't hesitate to reach out. Our friendly team is always ready to help!
+      </p>
+      <a href="https://wa.me/919XXXXXXXXX" target="_blank" class="btn btn-primary">
+        Chat on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About SoyaSatva</h3>
+          <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.8;">
+            Your trusted source for premium soy-based products. We're committed to providing 
+            the highest quality plant-based nutrition for a healthier, sustainable future.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="YouTube">📺</a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="benefits.html">Benefits</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Products</h3>
+          <ul class="footer-links">
+            <li><a href="products.html">Premium Tofu</a></li>
+            <li><a href="products.html">Soy Milk</a></li>
+            <li><a href="products.html">Soy Chunks</a></li>
+            <li><a href="products.html">Soy Flour</a></li>
+            <li><a href="products.html">Soy Snacks</a></li>
+            <li><a href="products.html">Protein Powder</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li>📧 info@soyasatva.com</li>
+            <li>📞 +91 XXXXXXXXXX</li>
+            <li>📍 Mumbai, Maharashtra</li>
+            <li>🕒 Mon - Sat: 9AM - 7PM</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 SoyaSatva. All rights reserved. | Premium Soy Products for Healthy Living</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919XXXXXXXXX" class="whatsapp-float" target="_blank" aria-label="Contact us on WhatsApp">
+    💬
+  </a>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
