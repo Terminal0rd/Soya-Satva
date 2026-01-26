@@ -3,15 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SoyaSatva - Premium soy-based products including tofu, soy milk, protein chunks, and healthy snacks. Discover the power of plant-based nutrition.">
-  <meta name="keywords" content="soya satva, tofu, soy milk, soy protein, vegetarian protein, plant-based nutrition, healthy food">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="description" content="SoyaSatva offers premium soy-based products including tofu, soy milk, protein chunks, and healthy snacks. Discover plant-based nutrition for a healthier lifestyle.">
+  <meta name="keywords" content="soya satva, tofu, soy milk, soy protein, vegetarian protein, plant-based nutrition, healthy food, soy chunks, soy flour">
   <meta name="author" content="SoyaSatva">
   <title>SoyaSatva - Premium Soy Products for Healthy Living</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://soyasatva.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soyasatva.com/">
+  <meta property="og:title" content="SoyaSatva - Premium Soy Products for Healthy Living">
+  <meta property="og:description" content="Discover premium soy-based products for a healthier lifestyle. Shop tofu, soy milk, protein chunks, and more from SoyaSatva.">
+  <meta property="og:image" content="https://soyasatva.com/images/og-image.jpg">
+  <meta property="og:site_name" content="SoyaSatva">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://soyasatva.com/">
+  <meta name="twitter:title" content="SoyaSatva - Premium Soy Products for Healthy Living">
+  <meta name="twitter:description" content="Discover premium soy-based products for a healthier lifestyle. Shop tofu, soy milk, protein chunks, and more from SoyaSatva.">
+  <meta name="twitter:image" content="https://soyasatva.com/images/twitter-card.jpg">
+  
+  <!-- Additional Meta Tags -->
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/premium.css">
+  
+  <!-- JSON-LD Schema: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SoyaSatva",
+    "url": "https://soyasatva.com",
+    "logo": "https://soyasatva.com/images/logo.png",
+    "description": "Premium soy-based products for healthy living including tofu, soy milk, protein chunks, and healthy snacks.",
+    "foundingDate": "2020",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-98XXXXXXXX",
+      "contactType": "Customer Service",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "sameAs": [
+      "https://facebook.com/soyasatva",
+      "https://instagram.com/soyasatva",
+      "https://twitter.com/soyasatva"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Health Street",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400001",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+  
+  <!-- JSON-LD Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SoyaSatva",
+    "url": "https://soyasatva.com",
+    "description": "Premium soy-based products for healthy living",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://soyasatva.com/products.html?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 </head>
 <body class="loading">
   
@@ -56,8 +132,8 @@
     </div>
     
     <div class="hero-content">
-      <h1 class="hero-title animate-fadeInUp">Welcome to SoyaSatva</h1>
-      <p class="hero-subtitle animate-fadeInUp stagger-2">
+      <h1 class="hero-title animate-fadeInUp heading-premium">Welcome to SoyaSatva</h1>
+      <p class="hero-subtitle animate-fadeInUp stagger-2 text-premium">
         Discover the power of plant-based nutrition with our premium soy products. 
         From creamy tofu to protein-rich chunks, we bring you the finest quality 
         soy-based foods for a healthier, more sustainable lifestyle.
@@ -116,7 +192,7 @@
   </section>
 
   <!-- Why Choose Us -->
-  <section class="bg-light">
+  <section class="bg-light spotlight-bg noise-overlay">
     <div class="container">
       <div class="section-header reveal">
         <h2 class="section-title">Why Choose SoyaSatva?</h2>
@@ -366,7 +442,7 @@
       
       <!-- Feedback Form -->
       <div class="reveal" style="max-width: 700px; margin: 0 auto 4rem;">
-        <div class="card" style="padding: 2.5rem;">
+        <div class="card gradient-border glass-card" style="padding: 2.5rem;">
           <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Leave Your Feedback</h3>
           <form id="feedbackForm">
             <div class="form-group">
@@ -506,6 +582,7 @@
   <script src="js/main.js"></script>
   <script src="js/effects.js"></script>
   <script src="js/feedback.js"></script>
+  <script src="js/premium.js"></script>
   
   <style>
     .slider-dot {

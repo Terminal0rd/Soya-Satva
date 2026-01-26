@@ -3,13 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
   <meta name="description" content="Browse our complete range of premium soy products - tofu, soy milk, protein chunks, flour, and healthy snacks. All products are non-GMO and packed with nutrition.">
-  <meta name="keywords" content="buy tofu, soy milk online, soy protein, soy chunks, soy flour, healthy snacks">
+  <meta name="keywords" content="buy tofu, soy milk online, soy protein, soy chunks, soy flour, healthy snacks, plant-based protein, vegetarian food">
   <title>Our Products - SoyaSatva | Premium Soy-Based Foods</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://soyasatva.com/products.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soyasatva.com/products.html">
+  <meta property="og:title" content="Our Products - SoyaSatva | Premium Soy-Based Foods">
+  <meta property="og:description" content="Browse our complete range of premium soy products including tofu, soy milk, protein chunks, and healthy snacks. Compare and shop now!">
+  <meta property="og:image" content="https://soyasatva.com/images/products-og.jpg">
+  <meta property="og:site_name" content="SoyaSatva">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://soyasatva.com/products.html">
+  <meta name="twitter:title" content="Our Products - SoyaSatva | Premium Soy-Based Foods">
+  <meta name="twitter:description" content="Browse our complete range of premium soy products. Compare products and order online.">
+  <meta name="twitter:image" content="https://soyasatva.com/images/products-twitter.jpg">
+  
+  <!-- Additional Meta Tags -->
+  <meta name="robots" content="index, follow">
   
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/premium.css">
+  <link rel="stylesheet" href="css/compare.css">
+  
+  <!-- JSON-LD Schema: Product Collection -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "SoyaSatva Products",
+    "description": "Complete range of premium soy-based products",
+    "numberOfItems": 12,
+    "itemListElement": [
+      {
+        "@type": "Product",
+        "position": 1,
+        "name": "Premium Tofu Block",
+        "description": "Soft, protein-rich tofu perfect for curries and stir-fries",
+        "image": "https://soyasatva.com/images/tofu-block.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "SoyaSatva"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "89",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://soyasatva.com/products.html#tofu-block"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "127"
+        }
+      },
+      {
+        "@type": "Product",
+        "position": 2,
+        "name": "Soy Milk Original",
+        "description": "Creamy, unsweetened soy milk packed with nutrients",
+        "image": "https://soyasatva.com/images/soy-milk.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "SoyaSatva"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "65",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://soyasatva.com/products.html#soy-milk"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "203"
+        }
+      },
+      {
+        "@type": "Product",
+        "position": 3,
+        "name": "Textured Soy Chunks",
+        "description": "Dehydrated soy chunks - meat alternative for fitness lovers",
+        "image": "https://soyasatva.com/images/soy-chunks.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "SoyaSatva"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "120",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://soyasatva.com/products.html#soy-chunks"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4",
+          "reviewCount": "95"
+        }
+      },
+      {
+        "@type": "Product",
+        "position": 4,
+        "name": "Soy Protein Powder",
+        "description": "Isolated soy protein for post-workout recovery",
+        "image": "https://soyasatva.com/images/protein-powder.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "SoyaSatva"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "450",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://soyasatva.com/products.html#protein-powder"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "156"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="loading">
   
@@ -110,7 +240,7 @@
 
   <!-- Product Modal -->
   <div id="productModal" class="modal">
-    <div class="modal-content">
+    <div class="modal-content gradient-border glass-card">
       <div class="modal-header">
         <h2 class="modal-title" id="modalProductName">Product Name</h2>
         <button class="modal-close" onclick="closeProductModal()">&times;</button>
@@ -293,6 +423,8 @@
   <script src="js/main.js"></script>
   <script src="js/effects.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/compare.js"></script>
   
   <style>
     .filter-btn:hover,

@@ -3,13 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact SoyaSatva for inquiries, orders, and support. Reach us via phone, email, WhatsApp, or visit our location in Mumbai.">
-  <meta name="keywords" content="contact soyasatva, customer support, order inquiry, location">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="description" content="Contact SoyaSatva for inquiries, orders, and support. Reach us via phone, email, WhatsApp, or visit our location in Mumbai. We're here to help!">
+  <meta name="keywords" content="contact soyasatva, customer support, order inquiry, location, customer service, tofu supplier">
   <title>Contact Us - SoyaSatva | Get in Touch</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://soyasatva.com/contact.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://soyasatva.com/contact.html">
+  <meta property="og:title" content="Contact Us - SoyaSatva | Get in Touch">
+  <meta property="og:description" content="Contact SoyaSatva for inquiries, orders, and support. Multiple ways to reach us including WhatsApp!">
+  <meta property="og:image" content="https://soyasatva.com/images/contact-og.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://soyasatva.com/contact.html">
+  <meta name="twitter:title" content="Contact Us - SoyaSatva">
+  <meta name="twitter:description" content="Reach out to us for inquiries and support. We're here to help!">
+  
+  <!-- Additional Meta Tags -->
+  <meta name="robots" content="index, follow">
   
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/premium.css">
+  
+  <!-- JSON-LD Schema: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SoyaSatva",
+    "image": "https://soyasatva.com/images/logo.png",
+    "description": "Premium soy-based products supplier in Mumbai offering tofu, soy milk, protein chunks, and healthy snacks.",
+    "@id": "https://soyasatva.com",
+    "url": "https://soyasatva.com",
+    "telephone": "+91-98XXXXXXXX",
+    "email": "info@soyasatva.com",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Health Street",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 19.0760,
+      "longitude": 72.8777
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    ],
+    "sameAs": [
+      "https://facebook.com/soyasatva",
+      "https://instagram.com/soyasatva",
+      "https://twitter.com/soyasatva"
+    ]
+  }
+  </script>
+  
+  <!-- JSON-LD Schema: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are your business hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We are open Monday to Saturday from 9:00 AM to 7:00 PM. We are closed on Sundays and public holidays."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer home delivery?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We offer home delivery across major cities in India. Orders can be placed via WhatsApp, phone, or through our contact form."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your products organic and non-GMO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "All our soy products are made from high-quality, non-GMO soybeans. Many of our products are certified organic. Please check individual product descriptions for details."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer bulk orders for businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer competitive pricing for bulk orders and B2B wholesale. Contact us directly to discuss your requirements and get a custom quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I place an order?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can place orders via WhatsApp (+91-98XXXXXXXX), phone call, or by filling out our contact form. We'll respond promptly with availability and delivery details."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="loading">
   
@@ -95,7 +209,7 @@
         
         <!-- Contact Form -->
         <div class="reveal-left">
-          <div class="card" style="padding: 2.5rem;">
+          <div class="card gradient-border-static glass-card" style="padding: 2.5rem;">
             <h2 style="color: var(--primary); margin-bottom: 1.5rem;">Send Us a Message</h2>
             <form id="contactForm">
               <div class="form-group">
@@ -391,5 +505,6 @@
   <script src="js/main.js"></script>
   <script src="js/effects.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/premium.js"></script>
 </body>
 </html>

@@ -199,18 +199,26 @@ function createProductCard(product) {
   const card = document.createElement('div');
   card.className = 'product-card card-premium reveal hover-glow';
   card.setAttribute('data-category', product.category);
+  card.setAttribute('data-popularity', product.popularity);
   
   card.innerHTML = `
+    <div class="compare-toggle-wrapper">
+      <label class="compare-toggle">
+        <input type="checkbox" data-product-id="${product.id}">
+        <span class="compare-toggle-box"></span>
+        <span class="compare-toggle-label">Compare</span>
+      </label>
+    </div>
     <div class="product-image">
-      <span style="font-size: 4rem;">${product.emoji}</span>
-      ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
+      <span class="product-emoji" style="font-size: 4rem;">${product.emoji}</span>
+      ${product.badge ? `<span class="product-badge badge">${product.badge}</span>` : ''}
     </div>
     <div class="product-info">
       <div class="product-category">${product.category}</div>
       <h3 class="product-title">${product.name}</h3>
       <p class="product-description">${product.shortDesc}</p>
       <div class="product-footer" style="flex-direction: column; gap: 0.75rem; align-items: stretch;">
-        <span class="product-price" style="text-align: center;">${product.price}</span>
+        <span class="product-price price" style="text-align: center;">${product.price}</span>
         <button class="btn whatsapp-btn btn-sm hover-glow" onclick="orderViaWhatsApp('${product.name}')" style="width: 100%; justify-content: center;">
           <span class="whatsapp-btn-icon">💬</span>
           Order via WhatsApp
@@ -372,3 +380,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, 100);
 });
+
+// ===== Export products data globally for other modules (e.g., compare system) =====
+window.productsData = productsData;
