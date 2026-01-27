@@ -57,8 +57,7 @@
 }
 
 .hover-glow:hover::before {
-  width: 300px;
-  height: 300px;
+  /* Disabled glow expansion */
 }
 
 .hover-glow > * {
@@ -159,8 +158,9 @@ body.loaded {
 }
 
 .card-premium:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 32px rgba(45, 134, 89, 0.25), 0 0 20px rgba(45, 134, 89, 0.1);
+  border-color: var(--primary);
 }
 
 .card-premium:hover::after {

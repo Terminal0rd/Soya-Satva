@@ -239,7 +239,7 @@ function validatePhone(phone) {
 // ===== WhatsApp Click Handler =====
 function openWhatsApp() {
   // Replace with actual WhatsApp number
-  const phoneNumber = '919XXXXXXXXX'; // Update with actual number
+  const phoneNumber = '918424045519'; // Update with actual number
   const message = encodeURIComponent('Hi! I would like to know more about SoyaSatva products.');
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
   
@@ -289,7 +289,7 @@ function initQuickContact() {
   
   if (phoneButton) {
     phoneButton.addEventListener('click', function() {
-      showToast('Calling +91 XXXXXXXXXX...', 'success');
+      showToast('Calling +91 8424045519...', 'success');
     });
   }
   

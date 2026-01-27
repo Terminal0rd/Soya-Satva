@@ -496,8 +496,8 @@
 }
 
 .hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 12px 28px rgba(45, 134, 89, 0.18);
 }
 
 .hover-scale {

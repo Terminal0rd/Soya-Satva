@@ -164,6 +164,8 @@
   // 4) ENHANCED HOVER EFFECTS
   // ============================================
   
+  // DISABLED - No 3D tilt effect on cards
+  /*
   function init3DHoverEffect() {
     const cards = document.querySelectorAll('.card-premium');
     
@@ -193,6 +195,7 @@
       });
     });
   }
+  */
   
   // ============================================
   // 5) FLOATING SHAPES PARALLAX
@@ -256,10 +259,12 @@
     // Initialize page transition
     initPageTransition();
     
-    // Initialize 3D hover effects
+    // Initialize 3D hover effects - DISABLED
+    /*
     setTimeout(() => {
       init3DHoverEffect();
     }, 200);
+    */
     
     // Re-initialize on dynamic content changes (for SPAs)
     const observer = new MutationObserver((mutations) => {
@@ -274,7 +279,7 @@
               
               // Re-scan for premium cards
               if (node.classList && node.classList.contains('card-premium')) {
-                init3DHoverEffect();
+                // init3DHoverEffect(); // DISABLED
               }
             }
           });
@@ -294,7 +299,7 @@
   
   // Expose utility to re-initialize effects (useful after dynamic content load)
   window.reinitEffects = function() {
-    init3DHoverEffect();
+    // init3DHoverEffect(); // DISABLED
     
     // Re-scan parallax elements
     parallaxElements = Array.from(document.querySelectorAll('.parallax-layer'));
@@ -331,9 +336,9 @@
 /**
  * Open WhatsApp with a custom message
  * @param {string} message - The message to send
- * @param {string} phone - Phone number (default: 919XXXXXXXXX)
+ * @param {string} phone - Phone number (default: 918424045519)
  */
-function openWhatsAppWithMessage(message, phone = '919XXXXXXXXX') {
+function openWhatsAppWithMessage(message, phone = '918424045519') {
   const encodedMessage = encodeURIComponent(message);
   const url = `https://wa.me/${phone}?text=${encodedMessage}`;
   window.open(url, '_blank');

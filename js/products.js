@@ -165,7 +165,9 @@ const productsData = [
 
 // ===== Initialize Products Page =====
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.location.pathname.includes('products.html')) {
+  // Check if productGrid exists (we're on products page)
+  const productGrid = document.getElementById('productGrid');
+  if (productGrid) {
     initProductsPage();
   }
 });
@@ -197,7 +199,7 @@ function renderProducts(products) {
 
 function createProductCard(product) {
   const card = document.createElement('div');
-  card.className = 'product-card card-premium reveal hover-glow';
+  card.className = 'product-card card-premium hover-glow';
   card.setAttribute('data-category', product.category);
   card.setAttribute('data-popularity', product.popularity);
   

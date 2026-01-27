@@ -453,7 +453,7 @@
 
         orderViaWhatsApp(productName, price) {
             const message = `Hi! I'm interested in ordering *${productName}* (₹${price}) from your comparison. Please share details about availability and delivery.`;
-            const phone = '919876543210'; // Replace with actual number
+            const phone = '918424045519'; // Replace with actual number
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
         }

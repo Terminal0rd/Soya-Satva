@@ -453,6 +453,8 @@ window.validateEmail = validateEmail;
 window.validatePhone = validatePhone;
 
 // ===== Card 3D Tilt Effect =====
+// DISABLED - No tilt effect on hover
+/*
 function init3DTilt() {
   const cards = document.querySelectorAll('.card-tilt, .product-card');
   
@@ -479,6 +481,7 @@ function init3DTilt() {
 
 // Initialize 3D tilt effect
 init3DTilt();
+*/
 
 // ===== Console Welcome Message =====
 console.log('%c🌱 Welcome to SoyaSatva! ', 'background: #2d8659; color: white; padding: 10px 20px; font-size: 16px; font-weight: bold;');

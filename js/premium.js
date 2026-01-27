@@ -95,9 +95,12 @@
       this.boundMouseMove = this.onMouseMove.bind(this);
       this.boundMouseLeave = this.onMouseLeave.bind(this);
       
+      // DISABLED - No tilt effect
+      /*
       if (!config.isTouchDevice && !config.prefersReducedMotion && !config.isMobile) {
         this.init();
       }
+      */
     }
     
     init() {
