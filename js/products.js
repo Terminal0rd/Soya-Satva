@@ -9,7 +9,7 @@ const productsData = [
     id: 1,
     name: 'Premium Tofu Block',
     category: 'tofu',
-    price: '₹89',
+    price: 'Rs',
     popularity: 5,
     badge: 'Popular',
     emoji: '🧈',
@@ -22,7 +22,7 @@ const productsData = [
     id: 2,
     name: 'Soy Milk Original',
     category: 'milk',
-    price: '₹65',
+    price: 'Rs',
     popularity: 5,
     badge: 'Bestseller',
     emoji: '🥛',
@@ -35,7 +35,7 @@ const productsData = [
     id: 3,
     name: 'Textured Soy Chunks',
     category: 'protein',
-    price: '₹120',
+    price: 'Rs',
     popularity: 4,
     badge: 'High Protein',
     emoji: '💪',
@@ -48,7 +48,7 @@ const productsData = [
     id: 4,
     name: 'Soy Flour (Gluten-Free)',
     category: 'flour',
-    price: '₹95',
+    price: 'Rs',
     popularity: 3,
     badge: 'Gluten-Free',
     emoji: '🌾',
@@ -61,7 +61,7 @@ const productsData = [
     id: 5,
     name: 'Crispy Soy Snacks',
     category: 'snacks',
-    price: '₹75',
+    price: 'Rs',
     popularity: 4,
     badge: 'Crunchy',
     emoji: '🍿',
@@ -74,7 +74,7 @@ const productsData = [
     id: 6,
     name: 'Silken Tofu',
     category: 'tofu',
-    price: '₹95',
+    price: 'Rs',
     popularity: 4,
     badge: 'Smooth',
     emoji: '🍮',
@@ -87,7 +87,7 @@ const productsData = [
     id: 7,
     name: 'Soy Milk Chocolate',
     category: 'milk',
-    price: '₹70',
+    price: 'Rs',
     popularity: 5,
     badge: 'Kids Love It',
     emoji: '🍫',
@@ -100,7 +100,7 @@ const productsData = [
     id: 8,
     name: 'Mini Soy Chunks',
     category: 'protein',
-    price: '₹110',
+    price: 'Rs',
     popularity: 4,
     badge: 'Quick Cook',
     emoji: '🥘',
@@ -113,7 +113,7 @@ const productsData = [
     id: 9,
     name: 'Soy Protein Powder',
     category: 'protein',
-    price: '₹450',
+    price: 'Rs',
     popularity: 5,
     badge: 'Fitness',
     emoji: '🏋️',
@@ -126,7 +126,7 @@ const productsData = [
     id: 10,
     name: 'Marinated Tofu Cubes',
     category: 'tofu',
-    price: '₹135',
+    price: 'Rs',
     popularity: 3,
     badge: 'Ready to Cook',
     emoji: '🍢',
@@ -139,7 +139,7 @@ const productsData = [
     id: 11,
     name: 'Soy Granules',
     category: 'protein',
-    price: '₹100',
+    price: 'Rs',
     popularity: 4,
     badge: 'Versatile',
     emoji: '🌰',
@@ -152,7 +152,7 @@ const productsData = [
     id: 12,
     name: 'Vanilla Soy Milk',
     category: 'milk',
-    price: '₹70',
+    price: 'Rs',
     popularity: 4,
     badge: 'Sweet',
     emoji: '🍦',
@@ -346,18 +346,10 @@ function initSort() {
           sortedProducts.sort((a, b) => b.popularity - a.popularity);
           break;
         case 'price-low':
-          sortedProducts.sort((a, b) => {
-            const priceA = parseInt(a.price.replace('₹', ''));
-            const priceB = parseInt(b.price.replace('₹', ''));
-            return priceA - priceB;
-          });
+          // Price sorting disabled - prices to be set by user
           break;
         case 'price-high':
-          sortedProducts.sort((a, b) => {
-            const priceA = parseInt(a.price.replace('₹', ''));
-            const priceB = parseInt(b.price.replace('₹', ''));
-            return priceB - priceA;
-          });
+          // Price sorting disabled - prices to be set by user
           break;
         case 'name':
           sortedProducts.sort((a, b) => a.name.localeCompare(b.name));
