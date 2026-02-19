@@ -265,7 +265,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gradient-hero);
+  background: url('images/bg.png') center/cover no-repeat;
   position: relative;
   overflow: hidden;
   padding-top: 80px;
@@ -278,8 +278,8 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
-  opacity: 0.3;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.25) 100%);
+  opacity: 1;
 }
 
 .floating-shape {
